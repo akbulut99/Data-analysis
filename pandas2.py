@@ -12,3 +12,4 @@ df.drop("sütun4",axis=1,inplace=True)#"1.satıra göre sütun 4'ü siler"
 #dataframe'i güncellemek için inplace=True olarak değeri vermeliyiz..a
 print(df)
 print(df.loc["A"])
+print(df.loc[["A","B"],["sütun1","sütun2"]])
