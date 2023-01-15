@@ -8,4 +8,7 @@ print(df)
 df["Column5"] = randn(4) # başka bir sütun eklme yöntemi
 print(df)
 df["Column6"] = ["newValue1","newValue2","newValue3","newValue4"]
-df.set_index("Column6")
+df.set_index("Column6") # column6 değerleri yeni satır başları olmuş oldu
+
+df.set_index("Column6",inplace = True) #güncelleme yaptık
+print(df) 
