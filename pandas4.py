@@ -16,4 +16,12 @@ print(df.loc["Group1"])#loc sayesinde dataframe'i parçaladık ve group1'deki in
 print(df.loc["Group1"].loc["Index1"])#group1 içindeki Index1'i çağırmış olduk
 print("grup 3 içindeki index2'nin 3.sütundaki değeri: ",df.loc["Group3"].loc["Index2"]["Column3"])
 
+df.index.names =["Groups","Indexes"]#dışardan içeriye doğru isim verdik
+print(df)
+print(df.xs("Group2"))#loc ile aynı işlemi görür
+print(df.xs("Index1",level="Indexes"))#bu özellik sayesinde g1,g2 ve g3'lerin ındex1 lerini alıyoruz level'da nerden başlayacağını belirtiyoruz
+
+
+
+
 
