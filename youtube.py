@@ -7,5 +7,12 @@ len(youtube.index)
 youtube["likes"].mean()
 youtube["dislikes"].mean()
 youtube[youtube["views"].max() == youtube["views"]]["title"].iloc[0]#en yüksek görüntülemeyi alan video bilgisi
-b=youtube[youtube["views"].min()==youtube["views"]]["title"].iloc[0]#en düşük görüntülemeyi alan video bilgisi
+youtube[youtube["views"].min()==youtube["views"]]["title"].iloc[0]#en düşük görüntülemeyi alan video bilgisi
 youtube.groupby("category_id").mean()[["comment_count"]] #kategorilere göre yorum sayılarının ortalamasını bulduk
+
+
+
+
+
+
+
