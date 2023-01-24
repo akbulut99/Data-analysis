@@ -17,9 +17,24 @@ youtube["title_length"] = youtube["title"].apply(countTitleCount)
 def countTag(tags):
     tagList = tags.split("|")
     return len(tagList)
-youtube["tag_count"] = youtube["tags"].apply(countTag)
-
-
-
+youtube["tag_count"] = youtube["tags"].apply(countTag) 
+likelist = []
+def likesAnddislikes(likes,dislikes):
+    likesList = list()
+    dislikesList = list()
+    for key,value in likes.iteritems():
+        likesList.append(value)
+    for key,value in dislikes.iteritems():
+        dislikesList.append(value)
+    
+    likeanddislikeratio = list()
+    for like,dislike in zip(likesList,dislikesList): 
+        if like + dislike == 0:
+            likeanddislikeratio.append(0)
+        else:
+            likeanddislikeratio.append(like/(like + dislike))
+    return likeanddislikeratio
+        
+youtube["likes_dislikes"] = likesAnddislikes(youtube["likes"],youtube["dislikes"])
 
 
