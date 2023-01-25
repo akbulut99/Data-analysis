@@ -35,6 +35,6 @@ def likesAnddislikes(likes,dislikes):
             likeanddislikeratio.append(like/(like + dislike))
     return likeanddislikeratio
         
-youtube["likes_dislikes"] = likesAnddislikes(youtube["likes"],youtube["dislikes"])
+youtube["likes_dislikes"] = likesAnddislikes(youtube["likes"],youtube["dislikes"]) 
 
 
