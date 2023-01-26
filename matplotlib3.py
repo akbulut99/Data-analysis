@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt 
 import numpy as np 
-x = np.arange(1,6)
+x = np.arange(1,6) 
 y = np.arange(2,11,2)
 
 fig,axes = plt.subplots(nrows=2,ncols=1)  #2 satırı ve 2 sütunu olan bir tuple gibi yapı oluşturduk
