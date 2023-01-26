@@ -11,8 +11,8 @@ plt.subplot(2,2,2)
 plt.plot(x,y,"green")
 
 plt.subplot(2,2,3)
-plt.plot(x,y,"yellow")
+plt.plot(x, x + 2 ,"yellow")
 
 plt.subplot(2,2,4)
-plt.plot(x,y,"black")
+plt.plot(x,x**3,"black")
 plt.show() 

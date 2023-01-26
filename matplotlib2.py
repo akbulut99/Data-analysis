@@ -16,5 +16,5 @@ axes2.plot(x,y)
 axes2.set_xlabel("ınner x")
 axes2.set_ylabel("ınner y")
 axes.set_title("ınner graph")
-
+  
 plt.show()
