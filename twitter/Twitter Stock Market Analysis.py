@@ -28,10 +28,11 @@ figure.update_xaxes(rangeselector = dict(buttons=list([
 
 ])))#farklı zamanlardaki stok fiyatlarını analiz etmek için butonlar ekledik,belirli periyodları görebiliriz
 
+#twitter timeline'daki hareketliliğe bakmak için
 tw["Date"]= pd.to_datetime(tw["Date"],format='%Y-%m-%d')
 tw['Year']=tw['Date'].dt.year
 tw["Month"] = tw["Date"].dt.month
-fig = px.line(tw, 
+figure = px.line(tw, 
               x="Month", 
               y="Close", 
               color='Year', 
