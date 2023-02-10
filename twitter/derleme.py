@@ -3,12 +3,7 @@ import collections
 
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as pp
-
-
-
-
-
+import matplotlib.pyplot as plt
 
 combinations =[]
 for count_100 in range(1+1):
@@ -25,7 +20,15 @@ print(combinations)
 birthdays = {(7,15): 'Michele', (3,14): 'Albert'}
 print(birthdays[(7,15)])
 
-
-rand_2d = np.random.random(size=(8,8))
-
-pp.matshow(rand_2d)
+x = np.linspace(0,5*math.pi,64)
+sinx =np.sin(x)
+cosx = np.cos(x)
+plt.plot(x,sinx,label='sin(x)')
+plt.plot(x,cosx,label = 'cos(x)')
+plt.plot(x, np.log(1 + x), label='log(1+x)')
+y = sinx * cosx
+z = cosx**2 - sinx**2
+plt.plot(y,z,label='y-z')
+x + y[16:32]
+plt.legend()#gösterge çubuklarını ekler
+plt.show()
