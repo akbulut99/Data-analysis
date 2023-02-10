@@ -23,12 +23,21 @@ print(birthdays[(7,15)])
 x = np.linspace(0,5*math.pi,64)
 sinx =np.sin(x)
 cosx = np.cos(x)
-plt.plot(x,sinx,label='sin(x)')
+""""plt.plot(x,sinx,label='sin(x)')
 plt.plot(x,cosx,label = 'cos(x)')
 plt.plot(x, np.log(1 + x), label='log(1+x)')
 y = sinx * cosx
 z = cosx**2 - sinx**2
 plt.plot(y,z,label='y-z')
-x + y[16:32]
+w = sinx + 1.5
+plt.plot(x,sinx)
+plt.plot(x,w,'g')
 plt.legend()#gösterge çubuklarını ekler
+"""
+monalisa=np.loadtxt('monalisa.txt')#dosyayı dahil ettik
+xgrad=np.linspace(0,1,134)
+monalisa_xgrad = monalisa*xgrad
+plt.figure(figsize=(8,5))
+plt.subplot(1,2,1);plt.imshow(monalisa,cmap='gray')
+plt.subplot(1,2,2); plt.imshow(monalisa_xgrad, cmap='gray')
 plt.show()
